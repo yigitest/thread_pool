@@ -19,11 +19,12 @@ int main (int argc, char * argv[]) {
     // create thread pool with 2 threads.
     tp::ThreadPool tp(2);
 	
-	// enqueue and store future
-	auto result = tp.enqueue(ApplyFoo(), 42);
+    // enqueue and store future
+    auto result = tp.enqueue(ApplyFoo(), 42);
 	
     // get result from future
     std::cout << result.get() << std::endl;	
+}
 
 ```
 
